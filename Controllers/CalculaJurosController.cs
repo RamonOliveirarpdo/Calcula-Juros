@@ -15,18 +15,14 @@ namespace Atividade3.Controllers
                 "dd/MM/yyyy",
                 CultureInfo.GetCultureInfo("pt-BR"));
 
-            double totalDias = (dataCorreta - DateTime.UtcNow).TotalDays;
+            double totalDias = (dataCorreta.Date - DateTime.UtcNow.Date).TotalDays;
             int diasParaCalcular = (int)Math.Round(totalDias);
 
-            decimal valorFinal = valorInicial * (decimal)System.Math.Pow(
-                    (double)(1 + taxaJuros),
-                    diasParaCalcular
-            );
+            decimal valorFinal = valorInicial * (1m + (taxaJuros * (decimal)diasParaCalcular));
 
             decimal jurosTotal = valorFinal - valorInicial;
-            var jurosArredondado = decimal.Round(jurosTotal, 2);
 
-            return decimal.Round(jurosArredondado);
+            return jurosTotal;
         }
     }
 }
