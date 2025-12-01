@@ -1,0 +1,33 @@
+[
+  {
+    "ContainingType": "Atividade3.Controllers.CalculaJurosController",
+    "Method": "CalcularJuros",
+    "RelativePath": "calculajuros",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "valorInicial",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "dataVencimento",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Decimal",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
